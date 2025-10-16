@@ -56,3 +56,43 @@ A modern, dockerized Learning Management System (LMS) built with Django, featuri
    ```bash
    git clone https://github.com/Priyansh-A/educa.git
    cd educa
+2. **Build in Docker**
+   ```bash
+   docker-compose up --build
+3. **Add the domain in config/ngnix/default.conf to your hosts or make a custom host**
+4. **Create Superuser for admin privilages**
+   ```bash
+   docker-compose exec web python manage.py createsuperuser
+6. **Various urls you can visit**
+
+PUBLIC PAGES (No Login Required)
+   /
+/course/subject/<subject>/
+/course/<slug>/
+/accounts/login/
+/students/register/
+
+Instructor Pages (Requires instructor privileges)
+/course/mine/
+/course/create/
+/course/<pk>/edit/
+/course/<pk>/delete/
+/course/<pk>/module/
+/course/module/<module_id>/content/<model_name>/create/
+/course/module/<module_id>/content/<model_name>/<id>/
+/course/content/<id>/delete/
+/course/module/<module_id>/
+/course/module/order/
+/course/content/order/
+
+Student Pages (Requires student login)
+/students/courses/
+/students/enroll-course/
+/students/course/<pk>/
+/students/course/<pk>/<module_id>/
+/chat/room/<course_id>/
+
+Admin & Authentication
+/admin/
+/accounts/login/
+/accounts/logged_out/
