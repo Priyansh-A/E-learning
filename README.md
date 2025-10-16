@@ -2,7 +2,7 @@
 
 A modern, dockerized Learning Management System (LMS) built with Django, featuring real-time chat, course management, and scalable architecture.
 
-![Django](https://img.shields.io/badge/Django-4.2-green)
+![Django](https://img.shields.io/badge/Django-5.1-green)
 ![Docker](https://img.shields.io/badge/Docker-Ready-blue)
 ![WebSockets](https://img.shields.io/badge/WebSockets-Enabled-orange)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue)
