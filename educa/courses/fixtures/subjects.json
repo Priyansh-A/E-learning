@@ -1,7 +1,15 @@
 [
 {
   "model": "courses.subject",
-  "pk": 1,
+  "pk": 3,
+  "fields": {
+    "title": "Computer Science",
+    "slug": "computer-science"
+  }
+},
+{
+  "model": "courses.subject",
+  "pk": 5,
   "fields": {
     "title": "Mathematics",
     "slug": "mathematics"
@@ -9,7 +17,7 @@
 },
 {
   "model": "courses.subject",
-  "pk": 2,
+  "pk": 6,
   "fields": {
     "title": "Physics",
     "slug": "physics"
@@ -17,18 +25,352 @@
 },
 {
   "model": "courses.subject",
-  "pk": 3,
+  "pk": 7,
   "fields": {
     "title": "Chemistry",
     "slug": "chemistry"
   }
 },
 {
-  "model": "courses.subject",
+  "model": "courses.course",
+  "pk": 1,
+  "fields": {
+    "owner": 3,
+    "subject": 3,
+    "title": "Web Dev",
+    "slug": "web-dev",
+    "overview": "Web Development",
+    "created": "2025-10-16T10:21:17.232Z",
+    "students": [
+      3
+    ]
+  }
+},
+{
+  "model": "courses.course",
+  "pk": 2,
+  "fields": {
+    "owner": 3,
+    "subject": 7,
+    "title": "Organic Chemistry",
+    "slug": "organic-chemistry",
+    "overview": "Hydrocarbons and about them",
+    "created": "2025-10-16T10:27:27.588Z",
+    "students": [
+      1
+    ]
+  }
+},
+{
+  "model": "courses.course",
+  "pk": 3,
+  "fields": {
+    "owner": 3,
+    "subject": 6,
+    "title": "Kinematics",
+    "slug": "kinematics",
+    "overview": "Motion",
+    "created": "2025-10-16T10:28:01.414Z",
+    "students": [
+      1,
+      3
+    ]
+  }
+},
+{
+  "model": "courses.course",
   "pk": 4,
   "fields": {
-    "title": "Computer Science",
-    "slug": "computer-science"
+    "owner": 3,
+    "subject": 5,
+    "title": "Calculus I",
+    "slug": "calculus-i",
+    "overview": "A very important math concept",
+    "created": "2025-10-16T10:29:06.226Z",
+    "students": [
+      3
+    ]
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 1,
+  "fields": {
+    "course": 1,
+    "title": "Frontend",
+    "description": "What the user sees and interacts with in the browser\r\n\r\n    Like: The menu, design, and seating area of a restaurant\r\n\r\n    Technologies: HTML, CSS, JavaScript, React, Vue\r\n\r\n    Responsible for: Layout, colors, buttons, animations, user interface",
+    "order": 0
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 2,
+  "fields": {
+    "course": 1,
+    "title": "Backend",
+    "description": "What happens behind the scenes on the server\r\n\r\n    Like: The kitchen, chefs, and recipes in a restaurant\r\n\r\n    Technologies: Python/Django, Node.js, Java, databases\r\n\r\n    Responsible for: Data storage, user authentication, business logic, APIs",
+    "order": 1
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 3,
+  "fields": {
+    "course": 2,
+    "title": "Hydrocarbons",
+    "description": "",
+    "order": 0
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 4,
+  "fields": {
+    "course": 3,
+    "title": "Newtons laws",
+    "description": "",
+    "order": 0
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 5,
+  "fields": {
+    "course": 4,
+    "title": "Limits and Continuity",
+    "description": "",
+    "order": 0
+  }
+},
+{
+  "model": "courses.content",
+  "pk": 1,
+  "fields": {
+    "module": 5,
+    "content_type": 13,
+    "object_id": 1,
+    "order": 0
+  }
+},
+{
+  "model": "courses.content",
+  "pk": 2,
+  "fields": {
+    "module": 5,
+    "content_type": 13,
+    "object_id": 2,
+    "order": 1
+  }
+},
+{
+  "model": "courses.content",
+  "pk": 3,
+  "fields": {
+    "module": 5,
+    "content_type": 14,
+    "object_id": 1,
+    "order": 2
+  }
+},
+{
+  "model": "courses.content",
+  "pk": 4,
+  "fields": {
+    "module": 4,
+    "content_type": 13,
+    "object_id": 3,
+    "order": 0
+  }
+},
+{
+  "model": "courses.content",
+  "pk": 5,
+  "fields": {
+    "module": 4,
+    "content_type": 12,
+    "object_id": 1,
+    "order": 1
+  }
+},
+{
+  "model": "courses.content",
+  "pk": 6,
+  "fields": {
+    "module": 3,
+    "content_type": 13,
+    "object_id": 4,
+    "order": 0
+  }
+},
+{
+  "model": "courses.content",
+  "pk": 7,
+  "fields": {
+    "module": 3,
+    "content_type": 14,
+    "object_id": 2,
+    "order": 1
+  }
+},
+{
+  "model": "courses.content",
+  "pk": 8,
+  "fields": {
+    "module": 1,
+    "content_type": 13,
+    "object_id": 5,
+    "order": 0
+  }
+},
+{
+  "model": "courses.content",
+  "pk": 9,
+  "fields": {
+    "module": 1,
+    "content_type": 11,
+    "object_id": 1,
+    "order": 1
+  }
+},
+{
+  "model": "courses.content",
+  "pk": 10,
+  "fields": {
+    "module": 2,
+    "content_type": 13,
+    "object_id": 6,
+    "order": 0
+  }
+},
+{
+  "model": "courses.content",
+  "pk": 11,
+  "fields": {
+    "module": 2,
+    "content_type": 14,
+    "object_id": 3,
+    "order": 1
+  }
+},
+{
+  "model": "courses.text",
+  "pk": 1,
+  "fields": {
+    "owner": 3,
+    "title": "Limits",
+    "created": "2025-10-17T08:30:02.285Z",
+    "updated": "2025-10-17T08:30:02.286Z",
+    "content": "A limit describes the value that a function approaches as the input (x) approaches some value.\r\n\r\nKey Idea: It's about the behavior near a point, not necessarily at the point.\r\n1.1 Intuitive Definition\r\n\r\nAs x gets closer and closer to a value a, the function f(x) gets closer and closer to a value L. We write this as:\r\nlim (x→a) f(x) = L\r\n1.2 Why We Need Limits\r\n\r\nFunctions can behave strangely at specific points. The limit helps us understand their behavior at these points.\r\n\r\nExample 1: The \"Hole\" in the Graph\r\nf(x) = (x² - 1)/(x - 1)\r\nThis function is undefined at x = 1 because it becomes 0/0. However, we can simplify it:\r\nf(x) = ((x-1)(x+1))/(x-1) = x + 1 (for all x ≠ 1)\r\n\r\nAs x gets closer and closer to 1, f(x) gets closer and closer to 2."
+  }
+},
+{
+  "model": "courses.text",
+  "pk": 2,
+  "fields": {
+    "owner": 3,
+    "title": "Continuity",
+    "created": "2025-10-17T08:30:33.125Z",
+    "updated": "2025-10-17T08:30:33.125Z",
+    "content": "Continuity means there are no breaks, jumps, or holes in the function at a point. The graph can be drawn without lifting your pen.\r\n2.1 Definition\r\n\r\nA function f is continuous at a point x = a if the following three conditions are met:\r\n\r\n    f(a) is defined. (The point exists)\r\n\r\n    lim (x→a) f(x) exists. (The limit exists)\r\n\r\n    lim (x→a) f(x) = f(a). (The limit equals the function's value)\r\n\r\nIf any of these conditions fail, the function is discontinuous at x = a.\r\n2.2 Types of Discontinuities\r\n\r\n    Removable Discontinuity (Hole): The limit exists, but f(a) is either undefined or not equal to the limit.\r\n\r\n        Example: Our first function, f(x) = (x² - 1)/(x - 1) at x=1.\r\n\r\n    Jump Discontinuity: The left-hand and right-hand limits exist but are not equal.\r\n\r\n        Example: The function g(x) = |x|/x at x=0."
+  }
+},
+{
+  "model": "courses.text",
+  "pk": 3,
+  "fields": {
+    "owner": 3,
+    "title": "First Law",
+    "created": "2025-10-17T08:32:52.375Z",
+    "updated": "2025-10-17T08:32:52.375Z",
+    "content": "Newton's First Law of Motion, also known as the Law of Inertia, states that:\r\n\r\n    An object at rest will stay at rest, and an object in motion will stay in motion with the same speed and in the same direction, unless acted upon by an unbalanced force.\r\n\r\nBreaking Down the Key Concepts\r\n\r\nTo fully understand this law, it's helpful to focus on its two main parts:\r\n1. The Tendency of Objects: Inertia\r\n\r\n    Inertia is the property of an object to resist any change in its state of motion.\r\n\r\n    It's not a force; it's a fundamental property of mass. The more mass an object has, the more inertia it has (and the harder it is to start, stop, or change its direction).\r\n\r\n    Examples:\r\n\r\n        A heavy boulder is hard to get moving because of its high inertia.\r\n\r\n        A moving train is hard to stop because of its high inertia.\r\n\r\n        If a car stops suddenly, your body lurches forward because your inertia wants to keep you moving at the car's previous speed.\r\n\r\n2. The Requirement for Change: An Unbalanced Force\r\n\r\n    A \"force\" is a push or a pull.\r\n\r\n    \"Unbalanced\" means the forces acting on the object do not cancel out. There is a net force.\r\n\r\n    A change in motion (starting, stopping, speeding up, slowing down, or changing direction) only happens if there is an unbalanced net force acting on the object.\r\n\r\nEveryday Examples\r\n\r\n    An Object at Rest:\r\n\r\n        A book lying on a table remains at rest until you (an unbalanced force) pick it up.\r\n\r\n        Why doesn't gravity pull it down? Because the table provides an equal and opposite force (a normal force), balancing the force of gravity. The net force is zero, so the state of motion doesn't change.\r\n\r\n    An Object in Motion:\r\n\r\n        A hockey puck sliding across frictionless ice will, in theory, keep sliding forever at the same speed. In reality, the unbalanced force of friction acts on it, slowing it down until it stops."
+  }
+},
+{
+  "model": "courses.text",
+  "pk": 4,
+  "fields": {
+    "owner": 3,
+    "title": "Hydrocarbons",
+    "created": "2025-10-17T08:34:44.717Z",
+    "updated": "2025-10-17T08:34:44.717Z",
+    "content": "Hydrocarbons are the simplest class of organic compounds, consisting entirely of atoms of hydrogen (H) and carbon (C).\r\n\r\nThe carbon atoms form the skeleton or backbone of the molecule, and the hydrogen atoms attach to them. The name \"hydrocarbon\" comes directly from its components: \"hydro-\" for hydrogen and \"-carbon\" for carbon.\r\nKey Characteristics:\r\n\r\n    Fundamental Building Blocks: They are the primary components of fossil fuels like natural gas, gasoline, and coal.\r\n\r\n    Covalent Bonds: The carbon-hydrogen and carbon-carbon bonds are strong covalent bonds.\r\n\r\n    Nonpolar Nature: Because carbon and hydrogen have similar electronegativities, hydrocarbons are generally nonpolar. This makes them insoluble in water but soluble in other nonpolar solvents.\r\n\r\n    Combustibility: Most hydrocarbons are highly flammable and release a significant amount of energy when burned, which is why they are used as fuels."
+  }
+},
+{
+  "model": "courses.text",
+  "pk": 5,
+  "fields": {
+    "owner": 3,
+    "title": "Frontend",
+    "created": "2025-10-17T08:40:08.450Z",
+    "updated": "2025-10-17T08:40:08.450Z",
+    "content": "The frontend is everything you see and interact with directly in a web browser or mobile application. It's often called the \"client-side\" of development.\r\n\r\nThink of it as the interface and presentation layer—the visual part of a website or app that users experience.\r\nThe Restaurant Analogy\r\n\r\nA great way to understand frontend vs. backend is to think of a restaurant:\r\n\r\n    The Frontend is the dining room.\r\n\r\n        It includes the menu you read, the chairs you sit on, the decor, and your interaction with the waiter.\r\n\r\n        It's designed to be pleasant, intuitive, and functional for you, the customer.\r\n\r\n    The Backend is the kitchen.\r\n\r\n        It's where the food is prepared, inventory is managed, and orders are processed. You don't see it, but it's essential for the restaurant to function."
+  }
+},
+{
+  "model": "courses.text",
+  "pk": 6,
+  "fields": {
+    "owner": 3,
+    "title": "Backend",
+    "created": "2025-10-17T08:49:59.517Z",
+    "updated": "2025-10-17T08:49:59.517Z",
+    "content": "The backend is the server-side part of a software application that users do not see. It handles business logic, data storage, security, and server configuration. It processes requests from the frontend, interacts with databases, and sends appropriate responses back to the client.\r\n\r\nExamples of Backend\r\n\r\n    User Authentication: The server verifying your login credentials when you sign into your bank account.\r\n\r\n    E-commerce Transaction: Processing a payment through Stripe or PayPal and updating the inventory database after you place an order.\r\n\r\n    Social Media Feed: The algorithm that determines and serves the personalized posts you see on your Twitter or LinkedIn feed.\r\n\r\n    API Service: A weather app's frontend fetching the latest forecast data from a backend API.\r\n\r\nBasic Backend Roadmap\r\n\r\n    How the Internet Works\r\n\r\n        HTTP/HTTPS protocols, RESTful API principles, HTTP methods (GET, POST, PUT, DELETE)\r\n\r\n        Client-Server Model, Request-Response Cycle\r\n\r\n    A Programming Language\r\n\r\n        Choose one primary language:\r\n\r\n            JavaScript/Node.js: (Allows using JS on both frontend and backend)\r\n\r\n            Python: (Known for simplicity and powerful frameworks like Django and Flask)\r\n\r\n            Java: (Enterprise-level, robust, and scalable)\r\n\r\n            C#: (Often used with the .NET framework)\r\n\r\n            PHP: (Historically dominant for the web)\r\n\r\n            Ruby: (Known for the Rails framework)"
+  }
+},
+{
+  "model": "courses.file",
+  "pk": 1,
+  "fields": {
+    "owner": 3,
+    "title": "File example",
+    "created": "2025-10-17T08:48:30.866Z",
+    "updated": "2025-10-17T08:48:30.866Z",
+    "file": "files/Text-to-PDF-42j.pdf"
+  }
+},
+{
+  "model": "courses.image",
+  "pk": 1,
+  "fields": {
+    "owner": 3,
+    "title": "First Law",
+    "created": "2025-10-17T08:33:21.103Z",
+    "updated": "2025-10-17T08:33:21.103Z",
+    "file": "images/Newtons-first-law-of-motion_xBN42uy.webp"
+  }
+},
+{
+  "model": "courses.video",
+  "pk": 1,
+  "fields": {
+    "owner": 3,
+    "title": "Limits and continuity",
+    "created": "2025-10-17T08:31:43.453Z",
+    "updated": "2025-10-17T08:31:43.454Z",
+    "url": "https://youtu.be/9brk313DjV8?si=FJLd-scOqZs5TdE4"
+  }
+},
+{
+  "model": "courses.video",
+  "pk": 2,
+  "fields": {
+    "owner": 3,
+    "title": "Video",
+    "created": "2025-10-17T08:39:11.427Z",
+    "updated": "2025-10-17T08:39:11.427Z",
+    "url": "https://youtu.be/z5hQ8iZZ8dU?si=kaHPo4jk-cZjubYn"
+  }
+},
+{
+  "model": "courses.video",
+  "pk": 3,
+  "fields": {
+    "owner": 3,
+    "title": "Backend demo",
+    "created": "2025-10-17T08:52:00.171Z",
+    "updated": "2025-10-17T08:52:00.171Z",
+    "url": "https://youtu.be/haq8oOat5eE?si=wleIy8nwlztIEkCL"
   }
 }
 ]
