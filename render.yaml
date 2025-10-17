@@ -5,4 +5,3 @@ services:
     env: docker
     plan: free
     docker: .
-      dockerfile: Dockerfile
