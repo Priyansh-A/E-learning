@@ -1,8 +1,0 @@
-# render.yaml (optional)
-services:
-  - type: web
-    name: educaproject
-    env: docker
-    plan: free
-    docker: 
-      dockerfile: Dockerfile
