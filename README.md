@@ -58,15 +58,22 @@ A modern, dockerized Learning Management System (LMS) built with Django, featuri
    cd E-learning
 2. **Build in Docker**
    ```bash
-   docker-compose up --build
-3. **Add the domain in config/ngnix/default.conf to your hosts or make a custom host**
-4. **Create Superuser for admin privilages**
+   docker-compose build
+3. **bash command in case of wait-for-it.sh error**
+   ```bash
+   dos2unix wait-for-it.sh
+4. **Run the container**
+   ```bash
+   docker-compose up
+5. **Add the domain in config/ngnix/default.conf to your hosts or make a custom host**
+6. **Create Superuser for admin privilages**
    ```bash
    docker-compose exec web python manage.py createsuperuser
-5. **Filling data in the site**
+7. **In the admin/ page add users and give them various privilages make at least 3 users!!**
+8. **Filling data in the site**
    ```bash
    docker-compose exec web python manage.py loaddata subjects.json
-6. **Various urls you can visit**
+9. **Various urls you can visit**
 
 # 🌐 Available URLs
 
