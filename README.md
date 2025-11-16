@@ -66,7 +66,7 @@ A modern, dockerized Learning Management System (LMS) built with Django, featuri
 5. **Filling data in the site**
    ```bash
    docker-compose exec web python manage.py loaddata subjects.json
-7. **Various urls you can visit**
+6. **Various urls you can visit**
 
 # 🌐 Available URLs
 
