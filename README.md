@@ -54,8 +54,8 @@ A modern, dockerized Learning Management System (LMS) built with Django, featuri
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/Priyansh-A/educa.git
-   cd educa
+   git clone https://github.com/Priyansh-A/E-learning.git
+   cd E-learning
 2. **Build in Docker**
    ```bash
    docker-compose up --build
