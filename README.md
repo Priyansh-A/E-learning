@@ -108,3 +108,11 @@ A modern, dockerized Learning Management System (LMS) built with Django, featuri
 - `/admin/` - Django admin interface
 - `/accounts/login/` - User login page
 - `/accounts/logged_out/` - Logout confirmation page
+
+
+**ScreenShots**
+
+![alt text](<Screenshot 2026-02-08 133135.png>)
+![alt text](<Screenshot 2026-02-08 133226.png>)
+![alt text](<Screenshot 2026-02-08 133246.png>)
+![alt text](<Screenshot 2026-02-08 133341.png>)
